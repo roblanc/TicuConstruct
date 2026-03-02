@@ -1,6 +1,7 @@
 <?php
 /**
- * Primește datele formularului și trimite email de la contact@ticuconstruct.ro către contact@ticuconstruct.ro
+ * Primește datele formularului, le salvează local și trimite email direct.
+ * Nu folosește mailto.
  */
 
 header('Content-Type: application/json; charset=utf-8');
@@ -19,55 +20,54 @@ $email     = trim($_POST['email'] ?? '');
 $zona      = trim($_POST['zona'] ?? '');
 $descriere = trim($_POST['descriere'] ?? '');
 
-if (empty($telefon) || empty($email) || empty($zona) || empty($descriere)) {
+if ($telefon === '' || $email === '' || $zona === '' || $descriere === '') {
     http_response_code(400);
-    echo json_encode(['ok' => false, 'error' => 'Toate câmpurile sunt obligatorii']);
+    echo json_encode(['ok' => false, 'error' => 'Toate campurile sunt obligatorii.']);
     exit;
 }
 
-$configPath = __DIR__ . '/config.php';
-if (!file_exists($configPath)) {
-    http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'Lipsește config.php. Copiază config.php.example în config.php și completează datele SMTP.']);
+if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    http_response_code(400);
+    echo json_encode(['ok' => false, 'error' => 'Email invalid.']);
     exit;
 }
 
-$config = require $configPath;
+$to = 'contact@ticuconstruct.ro';
+$from = 'contact@ticuconstruct.ro';
+$subject = 'Cerere oferta - Ticu Construct';
+$body = "Cerere oferta noua\n\n" .
+        "Telefon client: {$telefon}\n" .
+        "Email client: {$email}\n" .
+        "Locatie/Zona: {$zona}\n\n" .
+        "Descriere:\n{$descriere}\n";
 
-// Încarcă PHPMailer (după composer install)
-require __DIR__ . '/vendor/autoload.php';
-
-use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
-use PHPMailer\PHPMailer\Exception;
-
-$mail = new PHPMailer(true);
-
-try {
-    $mail->isSMTP();
-    $mail->Host       = $config['smtp_host'];
-    $mail->SMTPAuth   = true;
-    $mail->Username   = $config['smtp_user'];
-    $mail->Password   = $config['smtp_pass'];
-    $mail->SMTPSecure = $config['smtp_secure'] ?? PHPMailer::ENCRYPTION_STARTTLS;
-    $mail->Port       = $config['smtp_port'] ?? 587;
-    $mail->CharSet    = 'UTF-8';
-
-    // De la și către contact@ticuconstruct.ro
-    $mail->setFrom($config['smtp_user'], 'Ticu Construct - Cerere Ofertă');
-    $mail->addAddress($config['smtp_user'], 'Ticu Construct');
-
-    $mail->Subject = 'Cerere ofertă - Ticu Construct';
-    $mail->Body    = "Cerere ofertă nouă\n\n" .
-                     "Telefon client: $telefon\n" .
-                     "Email client: $email\n" .
-                     "Locație/Zonă: $zona\n\n" .
-                     "Descriere:\n$descriere";
-
-    $mail->send();
-    echo json_encode(['ok' => true]);
-
-} catch (Exception $e) {
-    http_response_code(500);
-    echo json_encode(['ok' => false, 'error' => 'Eroare la trimitere: ' . $mail->ErrorInfo]);
+// Salveaza local o copie a datelor clientului
+$csvFile = __DIR__ . DIRECTORY_SEPARATOR . 'oferte.csv';
+$csvHandle = fopen($csvFile, 'a');
+if ($csvHandle !== false) {
+    if (filesize($csvFile) === 0) {
+        fputcsv($csvHandle, ['data', 'telefon', 'email', 'zona', 'descriere']);
+    }
+    fputcsv($csvHandle, [date('Y-m-d H:i:s'), $telefon, $email, $zona, $descriere]);
+    fclose($csvHandle);
 }
+
+$headers = [];
+$headers[] = 'MIME-Version: 1.0';
+$headers[] = 'Content-Type: text/plain; charset=UTF-8';
+$headers[] = 'From: Ticu Construct <' . $from . '>';
+$headers[] = 'Reply-To: ' . $email;
+$headers[] = 'X-Mailer: PHP/' . phpversion();
+
+$sent = mail($to, $subject, $body, implode("\r\n", $headers));
+
+if (!$sent) {
+    http_response_code(500);
+    echo json_encode([
+        'ok' => false,
+        'error' => 'Serverul nu a putut trimite emailul. Verifica setarile de mail pe hosting.'
+    ]);
+    exit;
+}
+
+echo json_encode(['ok' => true]);

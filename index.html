@@ -428,8 +428,13 @@
                     </div>
                     <h2 class="text-3xl md:text-4xl font-black text-slate-900 dark:text-white mb-2">Cere o ofertă</h2>
                     <p class="text-slate-600 dark:text-slate-400 mb-10">Completează formularul și te contactăm în cel mai scurt timp.</p>
-                    <form id="form-oferta"
+                    <form id="form-oferta" name="cerere-oferta" method="POST" data-netlify="true"
+                        netlify-honeypot="bot-field" action="/?trimis=1#cerere-oferta"
                         class="flex flex-col gap-6 p-8 rounded-2xl bg-slate-50 dark:bg-slate-900/50 border border-slate-200 dark:border-slate-700">
+                        <input type="hidden" name="form-name" value="cerere-oferta">
+                        <p class="hidden">
+                            <label>Nu completa acest camp daca esti om: <input name="bot-field"></label>
+                        </p>
                         <div>
                             <label for="telefon" class="block text-sm font-bold text-slate-700 dark:text-slate-300 mb-2">Telefon *</label>
                             <input type="tel" id="telefon" name="telefon" required
@@ -623,35 +628,11 @@
         mobileLinks.forEach(link => link.addEventListener('click', toggleMenu));
         document.getElementById('mobile-oferta-btn')?.addEventListener('click', toggleMenu);
 
-        if (window.location.hash === '#multumim') {
+        const query = new URLSearchParams(window.location.search);
+        if (window.location.hash === '#multumim' || query.get('trimis') === '1') {
             document.getElementById('multumim-msg').classList.remove('hidden');
+            window.scrollTo({ top: document.getElementById('cerere-oferta').offsetTop - 80, behavior: 'smooth' });
         }
-
-        document.getElementById('form-oferta').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const btn = this.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            btn.disabled = true;
-            btn.innerHTML = '<span class="material-symbols-outlined animate-spin">progress_activity</span> Se trimite...';
-
-            const formData = new FormData(this);
-            try {
-                const res = await fetch('send-oferta.php', { method: 'POST', body: formData });
-                const data = await res.json();
-                if (data.ok) {
-                    window.location.hash = 'multumim';
-                    document.getElementById('multumim-msg').classList.remove('hidden');
-                    this.reset();
-                    window.scrollTo({ top: document.getElementById('cerere-oferta').offsetTop - 80, behavior: 'smooth' });
-                } else {
-                    alert('Eroare: ' + (data.error || 'Nu s-a putut trimite cererea.'));
-                }
-            } catch (err) {
-                alert('Eroare de conexiune. Verifică că send-oferta.php este pe server și că ai configurat config.php.');
-            }
-            btn.disabled = false;
-            btn.innerHTML = originalText;
-        });
     </script>
 </body>
 
