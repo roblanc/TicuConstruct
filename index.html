@@ -637,6 +637,18 @@
             document.getElementById('multumim-msg').classList.remove('hidden');
             window.scrollTo({ top: document.getElementById('cerere-oferta').offsetTop - 80, behavior: 'smooth' });
         }
+
+        const telefonInput = document.getElementById('telefon');
+        telefonInput?.addEventListener('input', function () {
+            const startsWithPlus = this.value.startsWith('+');
+            let cleaned = this.value.replace(/[^\d+\s-]/g, '');
+            if (startsWithPlus) {
+                cleaned = '+' + cleaned.slice(1).replace(/[+]/g, '');
+            } else {
+                cleaned = cleaned.replace(/[+]/g, '');
+            }
+            this.value = cleaned;
+        });
     </script>
 </body>
 
