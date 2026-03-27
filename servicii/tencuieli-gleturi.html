@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Tencuieli și Gleturi Profesionale - Ticu Construct</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#f3712b", "background-light": "#f8f6f5", "background-dark": "#221610" }, fontFamily: { "display": ["Plus Jakarta Sans", "sans-serif"], "sans": ["Inter", "sans-serif"] } } } }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md dark:bg-background-dark/80 px-4 md:px-20 lg:px-40 py-4">
+            <div class="mx-auto max-w-[1200px] flex items-center justify-between">
+                <a href="../index.html" class="flex items-center gap-2 text-primary font-black uppercase text-xl">TICU CONSTRUCT</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                    <a href="../index.html" class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">Acasă</a>
+                    <a href="../index.html#servicii" class="text-primary transition-colors">Servicii</a>
+                    <a href="../blog/index.html" class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">Blog</a>
+                    <a href="../index.html#contact" class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero Section -->
+            <section class="relative py-20 px-4 md:px-20 lg:px-40 overflow-hidden">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    <div>
+                        <div class="inline-flex items-center gap-2 px-4 py-2 bg-primary/10 text-primary rounded-full text-xs font-bold uppercase tracking-widest mb-6">
+                            <span class="size-2 bg-primary rounded-full animate-pulse"></span>
+                            Servicii Profesionale
+                        </div>
+                        <h1 class="text-5xl md:text-7xl font-black text-slate-900 dark:text-white mb-8 leading-tight">Tencuieli & <span class="text-primary italic">Gleturi</span></h1>
+                        <p class="text-xl text-slate-600 dark:text-slate-400 mb-10 leading-relaxed">Transformăm pereții brute în suprafețe perfect plane, gata pentru finisaje de lux, folosind tehnologii de ultimă generație și materiale premium.</p>
+                        <div class="flex flex-wrap gap-4">
+                            <a href="../index.html#contact" class="bg-primary text-white font-black px-10 py-5 rounded-full shadow-2xl shadow-primary/30 hover:scale-105 transition-all">Solicită Ofertă</a>
+                            <div class="flex items-center gap-4 text-slate-500 font-bold">
+                                <span class="material-symbols-outlined text-primary">verified</span>
+                                Calitate Garantată
+                            </div>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <div class="aspect-square rounded-[3rem] overflow-hidden shadow-2xl border-8 border-white dark:border-slate-800 rotate-3 transition-transform hover:rotate-0 duration-700">
+                            <img src="../tencuit.png" alt="Tencuieli profesionale" class="w-full h-full object-cover" />
+                        </div>
+                        <div class="absolute -bottom-10 -left-10 bg-white dark:bg-slate-800 p-8 rounded-3xl shadow-2xl border border-slate-100 dark:border-slate-700 hidden md:block animate-bounce-slow">
+                            <h4 class="text-2xl font-black text-primary mb-1">100%</h4>
+                            <p class="text-xs font-bold text-slate-500 uppercase tracking-widest">Planeitate Perfectă</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Process Section -->
+            <section class="py-24 bg-white dark:bg-slate-900/50 px-4 md:px-20 lg:px-40">
+                <div class="max-w-[1200px] mx-auto">
+                    <div class="text-center mb-20">
+                        <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mb-6">Cum lucrăm?</h2>
+                        <p class="text-slate-500 max-w-2xl mx-auto italic">Fiecare perete trece printr-un proces riguros de pregătire și finisare.</p>
+                    </div>
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                        <!-- Step 1 -->
+                        <div class="p-8 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 group hover:border-primary transition-all">
+                            <span class="text-5xl font-black text-primary/10 group-hover:text-primary/20 transition-colors">01</span>
+                            <h3 class="text-xl font-black mt-4 mb-4">Pregătirea Suportului</h3>
+                            <p class="text-slate-500 text-sm">Curățarea pereților, amorsarea și montarea martorilor de nivel (șine de ghidaj).</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="p-8 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 group hover:border-primary transition-all">
+                            <span class="text-5xl font-black text-primary/10 group-hover:text-primary/20 transition-colors">02</span>
+                            <h3 class="text-xl font-black mt-4 mb-4">Aplicare Mecanizată</h3>
+                            <p class="text-slate-500 text-sm">Folosim utilaje PFT pentru o aplicare uniformă și o aderență maximă a tencuielii.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="p-8 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 group hover:border-primary transition-all">
+                            <span class="text-5xl font-black text-primary/10 group-hover:text-primary/20 transition-colors">03</span>
+                            <h3 class="text-xl font-black mt-4 mb-4">Finisare & Gletuire</h3>
+                            <p class="text-slate-500 text-sm">Aplicăm straturile de glet de încărcare și finisaj pentru un aspect catifelat.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="p-8 bg-slate-50 dark:bg-slate-800 rounded-[2.5rem] border border-slate-100 dark:border-slate-700 group hover:border-primary transition-all">
+                            <span class="text-5xl font-black text-primary/10 group-hover:text-primary/20 transition-colors">04</span>
+                            <h3 class="text-xl font-black mt-4 mb-4">Control Calitate</h3>
+                            <p class="text-slate-500 text-sm">Verificăm planeitatea cu lumini speciale de control pentru a depista orice imperfecțiune.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-slate-900 text-slate-300 py-16 px-4 md:px-20 lg:px-40 text-center">
+            <p>© 2026 Ticu Construct. Realizat de Nico Ticu.</p>
+        </footer>
+    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+</body>
+</html>

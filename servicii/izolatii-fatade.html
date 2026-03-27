@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Izolații Fațade & Eficiență Termică - Ticu Construct</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <script id="tailwind-config">
+        tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary": "#f3712b", "background-light": "#f8f6f5", "background-dark": "#221610" }, fontFamily: { "display": ["Plus Jakarta Sans", "sans-serif"], "sans": ["Inter", "sans-serif"] } } } }
+    </script>
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        h1, h2, h3, .font-display { font-family: 'Plus Jakarta Sans', sans-serif; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 overflow-x-hidden">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <!-- Header -->
+        <header class="sticky top-0 z-50 w-full border-b border-primary/10 bg-white/80 backdrop-blur-md dark:bg-background-dark/80 px-4 md:px-20 lg:px-40 py-4">
+            <div class="mx-auto max-w-[1200px] flex items-center justify-between">
+                <a href="../index.html" class="flex items-center gap-2 text-primary font-black uppercase text-xl">TICU CONSTRUCT</a>
+                <nav class="hidden md:flex items-center gap-8 text-sm font-semibold">
+                    <a href="../index.html" class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">Acasă</a>
+                    <a href="../index.html#servicii" class="text-primary transition-colors">Servicii</a>
+                    <a href="../blog/index.html" class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">Blog</a>
+                    <a href="../index.html#contact" class="text-slate-700 dark:text-slate-300 hover:text-primary transition-colors">Contact</a>
+                </nav>
+            </div>
+        </header>
+
+        <main class="flex-1">
+            <!-- Hero Service -->
+            <section class="py-20 px-4 md:px-20 lg:px-40 bg-gradient-to-b from-primary/5 to-transparent">
+                <div class="max-w-[1200px] mx-auto text-center">
+                    <h1 class="text-5xl md:text-8xl font-black text-slate-900 dark:text-white mb-8 tracking-tighter">Termosistem <span class="text-primary italic">& Fațade</span></h1>
+                    <p class="text-xl text-slate-600 dark:text-slate-400 max-w-3xl mx-auto mb-16 leading-relaxed">Redu facturile la energie cu până la 40%. Folosim materiale de ultimă generație precum polistirenul grafitat și vata bazaltică pentru o izolarea perfectă.</p>
+                    
+                    <div class="relative max-w-5xl mx-auto rounded-[3.5rem] overflow-hidden shadow-2xl group border-4 border-white dark:border-slate-800">
+                        <img src="../img/servicii/izolatii-fatade.png" alt="Izolatii fatade premium" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-8 md:p-16">
+                            <div class="text-left"><p class="text-primary font-black text-xl mb-2">Eficiență Energetică A+</p><p class="text-white text-lg font-bold opacity-80">Execuție rapidă cu echipă proprie și schelă autorizată.</p></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tech Details -->
+            <section class="py-24 px-4 md:px-20 lg:px-40">
+                <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-20">
+                    <div>
+                        <h2 class="text-3xl font-black mb-8">De ce să ne alegi pentru fațada ta?</h2>
+                        <ul class="space-y-6">
+                            <li class="flex gap-4"><span class="size-8 bg-primary rounded-full flex items-center justify-center text-white shrink-0"><span class="material-symbols-outlined text-sm">check</span></span><div><p class="font-bold">Sistem Complet</p><p class="text-slate-500 text-sm">Gestionăm totul, de la schelă la tencuiala decorativă finală.</p></div></li>
+                            <li class="flex gap-4"><span class="size-8 bg-primary rounded-full flex items-center justify-center text-white shrink-0"><span class="material-symbols-outlined text-sm">check</span></span><div><p class="font-bold">Fără Punți Termice</p><p class="text-slate-500 text-sm">Atenție sporită la detalii pentru a elimina pierderile de căldură la ferestre și colțuri.</p></div></li>
+                            <li class="flex gap-4"><span class="size-8 bg-primary rounded-full flex items-center justify-center text-white shrink-0"><span class="material-symbols-outlined text-sm">check</span></span><div><p class="font-bold">Garanție Extinsă</p><p class="text-slate-500 text-sm">Oferim garanție scrisă atât pentru materiale cât și pentru manopera executată.</p></div></li>
+                        </ul>
+                    </div>
+                    <div class="bg-slate-50 dark:bg-slate-800/50 p-12 rounded-[3rem] border border-slate-100 dark:border-slate-700">
+                        <h3 class="text-2xl font-black mb-6">Solicită o ofertă personalizată</h3>
+                        <p class="text-slate-500 mb-8">Trimite-ne planul casei tale sau solicită o vizionare gratuită pe șantier pentru un deviz exact.</p>
+                        <a href="../index.html#contact" class="flex items-center justify-center gap-3 bg-slate-900 dark:bg-primary text-white font-black py-5 rounded-full hover:scale-105 transition-all w-full">Contactează-ne</a>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="bg-slate-900 text-slate-300 py-16 px-4 md:px-20 lg:px-40 text-center">
+            <p>© 2026 Ticu Construct. Realizat de Nico Ticu.</p>
+        </footer>
+    </div>
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@400&display=swap" rel="stylesheet" />
+</body>
+</html>
