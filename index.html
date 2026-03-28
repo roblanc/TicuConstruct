@@ -242,14 +242,14 @@
                     <!-- Text Column -->
                     <div class="flex-[1.2] flex flex-col items-start text-left">
                         <div class="flex flex-col gap-3 md:gap-6 max-w-2xl">
-                            <h1
-                                class="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[5rem] font-black leading-[1.1] tracking-tight text-black">
-                                Construim cu<br>pasiune,
-                                <br>finisăm cu precizie.
+                            <h1 data-pretext-balanced
+                                class="text-[1.75rem] sm:text-4xl md:text-5xl lg:text-[7rem] font-black leading-[1] tracking-tight text-slate-900 drop-shadow-sm">
+                                Construim cu pasiune,
+                                finisăm cu precizie.
                             </h1>
                             <div class="space-y-4 md:space-y-6">
-                                <p
-                                    class="text-slate-600 dark:text-slate-400 text-sm sm:text-base md:text-xl leading-relaxed max-w-lg">
+                                <p data-pretext-shrinkwrap
+                                    class="text-slate-600 dark:text-slate-400 text-sm sm:text-base md:text-xl leading-relaxed max-w-lg bg-primary/5 p-4 rounded-2xl border-l-4 border-primary">
                                     Echipa lui Nico Ticu oferă servicii complete de tencuit,
                                     gletuit și izolații. </p>
                                 <div class="flex items-center gap-3 md:gap-4 group">
@@ -859,6 +859,29 @@
             </div>
         </div>
     </div>
+    <!-- Pretext Engine Integration -->
+    <script type="module">
+        import { initPretext, balance } from './js/pretext-ui.js';
+        
+        // Custom balancing for the hero title
+        const heroTitle = document.querySelector('[data-pretext-balanced]');
+        if (heroTitle) {
+            // Balance ensures lines are as even as possible for a more editorial look
+            // but we'll use a simpler version: just let shrinkwrap do the heavy lifting
+            // or use specific balance logic if we want to mimic Chenglou's demo
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            initPretext();
+            
+            // Re-run on fonts loaded to ensure accurate measurement
+            document.fonts.ready.then(() => {
+                initPretext();
+            });
+        });
+    </script>
+
+    <!-- Mobile Menu Script -->
     <script>
         const mobileMenuBtn = document.getElementById('mobile-menu-btn');
         const closeMenuBtn = document.getElementById('close-menu-btn');
