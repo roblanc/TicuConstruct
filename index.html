@@ -16,6 +16,8 @@
     <meta charset="utf-8" />
     <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <title>Ticu Construct - Construcții și Amenajări Profesionale</title>
+    <meta name="description"
+        content="Ticu Construct execută tencuieli, gleturi, șape, izolații și renovări în București și Ilfov, cu ofertă rapidă, etape clare și lucrări documentate." />
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -106,6 +108,30 @@
       "@context": "https://schema.org",
       "@graph": [
         {
+          "@type": "WebPage",
+          "@id": "https://ticuconstruct.ro/#webpage",
+          "url": "https://ticuconstruct.ro/",
+          "name": "Ticu Construct - Construcții și Amenajări Profesionale",
+          "description": "Servicii de tencuieli, gleturi, șape, izolații și renovări în București și Ilfov, cu răspunsuri directe, pași de lucru și exemple de proiecte.",
+          "isPartOf": {
+            "@id": "https://ticuconstruct.ro/#organization"
+          },
+          "about": [
+            {
+              "@type": "Thing",
+              "name": "Tencuială mecanizată"
+            },
+            {
+              "@type": "Thing",
+              "name": "Glet și finisaje interioare"
+            },
+            {
+              "@type": "Thing",
+              "name": "Renovări la cheie"
+            }
+          ]
+        },
+        {
           "@type": "LocalBusiness",
           "@id": "https://ticuconstruct.ro/#organization",
           "name": "Ticu Construct",
@@ -173,6 +199,34 @@
           ]
         },
         {
+          "@type": "HowTo",
+          "@id": "https://ticuconstruct.ro/#howto-pregatire",
+          "name": "Cum pregătești un proiect de construcții sau renovare",
+          "description": "Pași practici recomandați de Ticu Construct pentru pregătirea corectă a unei lucrări de finisaje sau renovare.",
+          "step": [
+            {
+              "@type": "HowToStep",
+              "name": "Definește obiectivul lucrării",
+              "text": "Stabilește dacă ai nevoie de tencuieli, gleturi, șape, izolații sau renovare completă și notează suprafețele aproximative."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Pregătește suportul și accesul",
+              "text": "Verifică instalațiile, accesul echipei, alimentarea cu apă și curent și eliberează zonele în care se lucrează."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Cere evaluarea tehnică",
+              "text": "Trimite poze, locația și o descriere scurtă pentru o ofertă mai rapidă și o recomandare tehnică potrivită."
+            },
+            {
+              "@type": "HowToStep",
+              "name": "Confirmă etapele de execuție",
+              "text": "Stabilește ordinea lucrărilor, materialele, termenele și modul de recepție înainte de începerea șantierului."
+            }
+          ]
+        },
+        {
           "@type": "FAQPage",
           "mainEntity": [
             {
@@ -189,6 +243,22 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Da, oferim garanție scrisă pentru toate lucrările executate, asigurând durabilitate și conformitate cu standardele în vigoare."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ce înseamnă tencuit și gletuit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tencuiala corectează și protejează pereții, iar gletul finisează suprafața pentru vopsire, tapet sau alte placări."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Cum aleg serviciul potrivit pentru renovarea unei locuințe?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Alegi în funcție de starea suportului, nivelul de planeitate dorit, buget și ordinea corectă a lucrărilor. O evaluare tehnică înainte de ofertare reduce erorile și costurile suplimentare."
               }
             }
           ]
@@ -285,9 +355,9 @@
                         <div class="flex flex-wrap items-center justify-start gap-3 mt-6 md:mt-10"><a
                                 href="#cerere-oferta"
                                 class="flex items-center justify-center rounded-full h-10 sm:h-12 md:h-14 px-5 sm:px-8 md:px-10 bg-primary text-white text-[11px] sm:text-sm md:text-base font-bold shadow-lg shadow-primary/20 hover:bg-primary/90 transition-all hover:scale-105 active:scale-95 leading-none font-mono">Cere
-                                ofertă </a><button
+                                ofertă </a><a href="#galerie"
                                 class="flex items-center justify-center rounded-full h-10 sm:h-12 md:h-14 px-5 sm:px-8 md:px-10 border border-slate-200 dark:border-slate-800 text-slate-900 dark:text-white text-[11px] sm:text-sm md:text-base font-bold hover:bg-slate-50 dark:hover:bg-slate-800 transition-all leading-none">Galerie
-                            </button></div>
+                            </a></div>
                     </div>
                     <!-- Image Column -->
                     <div class="flex-1 relative flex justify-end">
@@ -297,7 +367,7 @@
                             </div>
                             <picture>
                                 <source srcset="workers-special.webp" type="image/webp"><img loading="eager"
-                                    fetchpriority="high" alt="Ticu Construct Hammer and Helmet"
+                                    fetchpriority="high" alt="Echipă Ticu Construct pregătită pentru lucrări de construcții și finisaje"
                                     class="w-full h-auto object-contain mix-blend-multiply dark:brightness-125 transition-all duration-1000 hover:scale-105"
                                     src="workers-special.png" width="800" height="600" />
                             </picture>
@@ -328,9 +398,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Tencuit & Gletuit<br>profesionist.</h4>
+                                    Tencuit & Gletuit<br>profesionist.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -348,9 +418,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Turnat șape<br>perfect nivelate.</h4>
+                                    Turnat șape<br>perfect nivelate.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -368,9 +438,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Fundații și<br>structuri de beton.</h4>
+                                    Fundații și<br>structuri de beton.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -388,9 +458,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Izolații exterioare<br>pentru eficiență.</h4>
+                                    Izolații exterioare<br>pentru eficiență.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -408,9 +478,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Garduri și sisteme<br>de împrejmuire.</h4>
+                                    Garduri și sisteme<br>de împrejmuire.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -428,9 +498,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Alei și pavaje<br>de înaltă rezistență.</h4>
+                                    Alei și pavaje<br>de înaltă rezistență.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -448,9 +518,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Zidărie și<br>compartimentări.</h4>
+                                    Zidărie și<br>compartimentări.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -468,9 +538,9 @@
                                 </picture>
                             </div>
                             <div class="space-y-3">
-                                <h4
+                                <h3
                                     class="text-sm md:text-lg font-bold text-slate-900 dark:text-white leading-tight group-hover:text-primary transition-colors">
-                                    Renovări complete<br>la cheie.</h4>
+                                    Renovări complete<br>la cheie.</h3>
                                 <div
                                     class="w-8 h-0.5 bg-slate-200 dark:bg-slate-800 mx-auto group-hover:w-16 group-hover:bg-primary transition-all duration-500">
                                 </div>
@@ -484,6 +554,205 @@
                                 class="relative z-10 block bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white rounded-full px-12 py-5 font-black text-xl text-center font-mono">Cere
                                 o ofertă de preț</span>
                         </a>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-4 md:px-20 lg:px-40 bg-white dark:bg-slate-950" id="raspunsuri-directe">
+                <div class="max-w-[1240px] mx-auto">
+                    <div class="flex flex-col items-center text-center gap-4 mb-16">
+                        <div class="w-12 h-1.5 bg-primary mb-2 rounded-full"></div>
+                        <h2 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black tracking-tight">
+                            Răspunsuri directe pentru proprietari</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-lg max-w-3xl">
+                            Secțiune gândită pentru întrebările pe care le pun cel mai des clienții înainte de ofertare,
+                            ca să poți compara rapid servicii, etape și rezultate.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8">
+                            <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-4">Ce înseamnă tencuit și gletuit?</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                Tencuiala corectează denivelările și creează stratul suport, iar gletul aduce suprafața
+                                la nivelul de finisaj cerut pentru lavabilă, tapet sau decorativă.
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Dacă vrei comparație tehnică între variante, vezi
+                                <a class="text-primary font-semibold hover:underline" href="servicii/tencuieli-gleturi.html">pagina de tencuieli și gleturi</a>
+                                și articolul din
+                                <a class="text-primary font-semibold hover:underline" href="blog/tencuiala-mecanizata-vs-manuala.html">blog despre tencuială mecanizată vs. manuală</a>.
+                            </p>
+                        </article>
+                        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8">
+                            <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-4">Cum alegi serviciul potrivit pentru proiectul tău?</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                Alegerea corectă pleacă din starea suportului, ordinea lucrărilor, suprafața utilă,
+                                nivelul de finisaj dorit și bugetul real pentru execuție.
+                            </p>
+                            <ul class="space-y-2 text-slate-600 dark:text-slate-400">
+                                <li>Compară serviciile după rezultat final, nu doar după preț pe mp.</li>
+                                <li>Verifică ordinea: structură, zidărie, tencuială, șapă, glet, finisaj.</li>
+                                <li>Folosește și pagina de <a class="text-primary font-semibold hover:underline" href="preturi.html">prețuri</a>, plus pagina <a class="text-primary font-semibold hover:underline" href="despre.html">Despre noi</a> pentru context despre echipă.</li>
+                            </ul>
+                        </article>
+                        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8">
+                            <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-4">La ce să te aștepți în timpul unei renovări?</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                O renovare bine controlată are inspecție inițială, definirea etapelor, protejarea
+                                zonelor sensibile, execuție pe faze și recepție finală pe checklist.
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Pentru lucrări complete, vezi
+                                <a class="text-primary font-semibold hover:underline" href="servicii/renovari-la-cheie.html">renovări la cheie</a>
+                                și exemple în
+                                <a class="text-primary font-semibold hover:underline" href="galerie.html">galeria de proiecte</a>.
+                            </p>
+                        </article>
+                        <article class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8">
+                            <h3 class="text-2xl font-black text-slate-900 dark:text-white mb-4">Cum pregătești rapid cererea de ofertă?</h3>
+                            <p class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                Trimite locația, tipul de lucrare, suprafața estimată, termenul dorit și câteva poze
+                                clare ale zonelor unde se intervine.
+                            </p>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Asta scurtează timpul de clarificare și ajută echipa să îți răspundă mai precis prin
+                                formularul de
+                                <a class="text-primary font-semibold hover:underline" href="#cerere-oferta">ofertare</a>.
+                            </p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-4 md:px-20 lg:px-40 bg-slate-50 dark:bg-slate-900/40" id="pasi-proiect">
+                <div class="max-w-[1240px] mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-[1.1fr_0.9fr] gap-10 items-start">
+                        <div>
+                            <span class="text-primary font-bold uppercase tracking-widest text-sm font-mono">Pași clari</span>
+                            <h2 class="text-4xl md:text-5xl font-black text-slate-900 dark:text-white mt-3 mb-6">
+                                Cum pregătești corect o lucrare de construcții sau renovare?</h2>
+                            <p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed max-w-3xl">
+                                AI Overviews și motoarele conversaționale caută conținut procedural. Mai jos ai pașii
+                                practici după care lucrăm când evaluăm un proiect rezidențial.
+                            </p>
+                        </div>
+                        <div class="rounded-3xl bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8">
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4">Checklist rapid înainte de contact</h3>
+                            <ul class="space-y-3 text-slate-600 dark:text-slate-400">
+                                <li>Măsoară suprafețele aproximative sau pregătește planul.</li>
+                                <li>Notează dacă suportul este nou, vechi, umed sau deja finisat.</li>
+                                <li>Adună poze pentru pereți, pardoseli, fațadă sau curte.</li>
+                                <li>Stabilește dacă ai nevoie doar de manoperă sau și de recomandare materiale.</li>
+                            </ul>
+                            <a class="mt-6 inline-flex text-primary font-semibold hover:underline" href="blog/checklist-inainte-de-tencuiala.html">Vezi checklist complet în blog</a>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6 mt-12">
+                        <article class="rounded-3xl bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-800">
+                            <div class="text-primary font-mono font-black text-sm mb-4">PAS 01</div>
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-3">Definești obiectivul</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Spui exact dacă proiectul cere tencuieli, șape, izolații sau renovare completă și ce rezultat final urmărești.</p>
+                        </article>
+                        <article class="rounded-3xl bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-800">
+                            <div class="text-primary font-mono font-black text-sm mb-4">PAS 02</div>
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-3">Verifici suportul</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Se analizează planeitatea, aderența, umezeala, fisurile și instalațiile deja trase pentru a evita refaceri inutile.</p>
+                        </article>
+                        <article class="rounded-3xl bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-800">
+                            <div class="text-primary font-mono font-black text-sm mb-4">PAS 03</div>
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-3">Fixezi ordinea lucrărilor</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Ordinea corectă reduce costuri: structură, zidărie, tencuială, șapă, glet, apoi finisaje decorative și montajele finale.</p>
+                        </article>
+                        <article class="rounded-3xl bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-800">
+                            <div class="text-primary font-mono font-black text-sm mb-4">PAS 04</div>
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-3">Confirmi execuția</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed">Se stabilesc termenele, protecțiile de șantier, zonele de acces și criteriile de recepție înainte de începerea efectivă.</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-4 md:px-20 lg:px-40 bg-white dark:bg-background-dark" id="date-repere">
+                <div class="max-w-[1240px] mx-auto">
+                    <div class="flex flex-col items-center text-center gap-4 mb-16">
+                        <div class="w-12 h-1.5 bg-primary mb-2 rounded-full"></div>
+                        <h2 class="text-slate-900 dark:text-white text-4xl md:text-5xl font-black tracking-tight">
+                            Date și repere utile</h2>
+                        <p class="text-slate-500 dark:text-slate-400 text-lg max-w-3xl">
+                            Datele de mai jos sunt observabile direct pe site și ajută proprietarul să înțeleagă rapid
+                            acoperirea serviciilor, canalele de contact și tipurile de proiecte documentate.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                        <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8 text-center">
+                            <div class="text-4xl font-black text-primary mb-3">8</div>
+                            <h3 class="font-black text-slate-900 dark:text-white mb-2">servicii principale</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">De la tencuieli și șape până la garduri, pavaje și renovări complete.</p>
+                        </div>
+                        <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8 text-center">
+                            <div class="text-4xl font-black text-primary mb-3">6</div>
+                            <h3 class="font-black text-slate-900 dark:text-white mb-2">categorii în portofoliu</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Exemple vizuale pentru finisaje, beton, izolații, garduri, pavaje și renovări.</p>
+                        </div>
+                        <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8 text-center">
+                            <div class="text-4xl font-black text-primary mb-3">3</div>
+                            <h3 class="font-black text-slate-900 dark:text-white mb-2">canale de contact</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Telefon, email și formular de ofertă pentru clarificare rapidă.</p>
+                        </div>
+                        <div class="rounded-3xl border border-slate-200 dark:border-slate-800 bg-slate-50 dark:bg-slate-900 p-8 text-center">
+                            <div class="text-4xl font-black text-primary mb-3">6</div>
+                            <h3 class="font-black text-slate-900 dark:text-white mb-2">zile de lucru / săptămână</h3>
+                            <p class="text-sm text-slate-600 dark:text-slate-400">Program public: luni-vineri 08:00-18:00 și sâmbătă 09:00-14:00.</p>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                        <article class="rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8">
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4">Exemplu concret: sistem complet de finisaj</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                Într-un proiect rezidențial tipic, tencuiala mecanizată corectează suportul, șapa
+                                stabilizează pardoseala, iar gletul pregătește pereții pentru stratul final de vopsea.
+                            </p>
+                            <a class="text-primary font-semibold hover:underline" href="servicii/tencuieli-gleturi.html">Vezi fluxul de lucru pentru tencuieli și gleturi</a>
+                        </article>
+                        <article class="rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8">
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4">Citat expert</h3>
+                            <blockquote class="text-slate-700 dark:text-slate-300 leading-relaxed mb-4">
+                                „La finisaje, diferența nu se vede doar în ziua recepției. Se vede după luni de utilizare,
+                                când planeitatea, muchiile și aderența rămân stabile.”
+                            </blockquote>
+                            <p class="text-sm text-slate-500 dark:text-slate-400">Nico Ticu, coordonator Ticu Construct</p>
+                        </article>
+                        <article class="rounded-3xl bg-slate-50 dark:bg-slate-900 border border-slate-200 dark:border-slate-800 p-8">
+                            <h3 class="text-xl font-black text-slate-900 dark:text-white mb-4">Reper din conținutul tehnic</h3>
+                            <p class="text-slate-600 dark:text-slate-400 leading-relaxed mb-4">
+                                În ghidurile din blog, izolarea termică este prezentată ca o decizie cu impact direct în
+                                confort și în costul de exploatare al locuinței.
+                            </p>
+                            <a class="text-primary font-semibold hover:underline" href="blog/ghid-izolatie-termica.html">Citește ghidul despre izolație termică</a>
+                        </article>
+                    </div>
+                </div>
+            </section>
+            <section class="py-24 px-4 md:px-20 lg:px-40 bg-slate-950 text-white" id="perspective-santier">
+                <div class="max-w-[1240px] mx-auto">
+                    <div class="max-w-3xl mb-12">
+                        <span class="text-primary font-bold uppercase tracking-widest text-sm font-mono">Perspective din șantier</span>
+                        <h2 class="text-4xl md:text-5xl font-black mt-3 mb-6">Ce contează cu adevărat într-o lucrare rezidențială bine executată?</h2>
+                        <p class="text-slate-300 text-lg leading-relaxed">
+                            Secțiune editorială pentru GEO: idei tehnice, formulate clar, pe care un model AI le poate
+                            extrage când compară firme, metode și bune practici.
+                        </p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                            <h3 class="text-xl font-black mb-4">De ce ordinea operațiilor influențează costul total?</h3>
+                            <p class="text-slate-300 leading-relaxed">Când șapa, tencuiala și gletul sunt programate corect, scad refacerile, pierderile de material și timpii morți între echipe.</p>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                            <h3 class="text-xl font-black mb-4">De ce suportul decide calitatea finisajului?</h3>
+                            <p class="text-slate-300 leading-relaxed">Un suport cu umiditate, praf sau planeitate incorectă compromite și cele mai bune materiale, indiferent de brand sau buget.</p>
+                        </article>
+                        <article class="rounded-3xl border border-white/10 bg-white/5 p-8">
+                            <h3 class="text-xl font-black mb-4">De ce documentarea proiectului inspiră încredere?</h3>
+                            <p class="text-slate-300 leading-relaxed">Fotografiile, articolele explicative și răspunsurile directe reduc ambiguitatea și ajută clientul să compare servicii pe criterii reale.</p>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -504,7 +773,7 @@
                             class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2">
                             <picture>
                                 <source srcset="gallery_plastering.webp" type="image/webp"><img loading="lazy"
-                                    alt="Construcții Ticu" src="gallery_plastering.png" alt="Finisaj Tencuială"
+                                    alt="Finisaj de tencuială și glet realizat de Ticu Construct" src="gallery_plastering.png"
                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     width="640" height="640">
                             </picture>
@@ -522,7 +791,7 @@
                             class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2">
                             <picture>
                                 <source srcset="gallery_concrete.webp" type="image/webp"><img loading="lazy"
-                                    alt="Construcții Ticu" src="gallery_concrete.png" alt="Structură Beton"
+                                    alt="Structură de beton pentru proiect rezidențial executată de Ticu Construct" src="gallery_concrete.png"
                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     width="640" height="640">
                             </picture>
@@ -539,7 +808,7 @@
                             class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2">
                             <picture>
                                 <source srcset="gallery_insulation.webp" type="image/webp"><img loading="lazy"
-                                    alt="Construcții Ticu" src="gallery_insulation.png" alt="Izolație Exterioară"
+                                    alt="Aplicare sistem de izolație termică exterioară la fațadă" src="gallery_insulation.png"
                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     width="640" height="640">
                             </picture>
@@ -557,7 +826,7 @@
                             class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2">
                             <picture>
                                 <source srcset="gallery_fence.webp" type="image/webp"><img loading="lazy"
-                                    alt="Construcții Ticu" src="gallery_fence.png" alt="Gard Modern"
+                                    alt="Montaj gard și poartă pentru amenajare exterioară" src="gallery_fence.png"
                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     width="640" height="640">
                             </picture>
@@ -575,7 +844,7 @@
                             class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2">
                             <picture>
                                 <source srcset="gallery_pavement.webp" type="image/webp"><img loading="lazy"
-                                    alt="Construcții Ticu" src="gallery_pavement.png" alt="Pavaj Modern"
+                                    alt="Montaj pavaj și borduri pentru curte și alei" src="gallery_pavement.png"
                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     width="640" height="640">
                             </picture>
@@ -592,7 +861,7 @@
                             class="group relative aspect-[4/3] overflow-hidden rounded-3xl bg-slate-100 shadow-xl transition-all duration-500 hover:-translate-y-2">
                             <picture>
                                 <source srcset="gallery_renovation.webp" type="image/webp"><img loading="lazy"
-                                    alt="Construcții Ticu" src="gallery_renovation.png" alt="Renovare Interior"
+                                    alt="Renovare interioară la cheie pentru spațiu rezidențial" src="gallery_renovation.png"
                                     class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-110"
                                     width="640" height="640">
                             </picture>
@@ -705,7 +974,7 @@
                         <details
                             class="group bg-slate-50 dark:bg-slate-800/50 rounded-3xl p-6 border border-slate-100 dark:border-slate-700 transition-all cursor-pointer">
                             <summary class="flex items-center justify-between font-bold text-lg list-none">
-                                <span>Cât costă tencuiala mecanizată pe mp în București?</span>
+                                <span>Ce preț orientativ are tencuiala mecanizată pe mp în București?</span>
                                 <span
                                     class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
                             </summary>
@@ -739,6 +1008,32 @@
                                 Da, toate proiectele noastre beneficiază de garanție. Ne mândrim cu calitatea execuției
                                 noastre și folosim doar materiale de la producători de top pentru a asigura
                                 durabilitatea în timp.
+                            </div>
+                        </details>
+                        <details
+                            class="group bg-slate-50 dark:bg-slate-800/50 rounded-3xl p-6 border border-slate-100 dark:border-slate-700 transition-all cursor-pointer">
+                            <summary class="flex items-center justify-between font-bold text-lg list-none">
+                                <span>Ce înseamnă tencuit și gletuit într-un proiect rezidențial?</span>
+                                <span
+                                    class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Tencuiala reglează și protejează suportul, iar gletul finisează suprafața pentru vopsire
+                                sau placare. Combinația corectă oferă planeitate, muchii curate și consum controlat de
+                                material la finisaj.
+                            </div>
+                        </details>
+                        <details
+                            class="group bg-slate-50 dark:bg-slate-800/50 rounded-3xl p-6 border border-slate-100 dark:border-slate-700 transition-all cursor-pointer">
+                            <summary class="flex items-center justify-between font-bold text-lg list-none">
+                                <span>Cum alegi firma potrivită pentru o renovare sau lucrare de finisaje?</span>
+                                <span
+                                    class="material-symbols-outlined transition-transform group-open:rotate-180">expand_more</span>
+                            </summary>
+                            <div class="mt-4 text-slate-600 dark:text-slate-400 leading-relaxed">
+                                Verifici dacă firma explică etapele, arată lucrări similare, oferă context tehnic și are
+                                un mod clar de estimare. De aceea am legat pagina principală de servicii, prețuri,
+                                galerie și blog, ca să poți valida informația din mai multe surse interne.
                             </div>
                         </details>
                     </div>
